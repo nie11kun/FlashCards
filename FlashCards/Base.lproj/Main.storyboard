@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N4N-v4-B5z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Term Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Term Controller" customClass="TermController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,127 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flashcard Terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfG-Lk-TTa">
+                                <rect key="frame" x="124" y="323" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lfG-Lk-TTa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MTh-S4-Owu"/>
+                            <constraint firstItem="lfG-Lk-TTa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qEp-i1-tRh"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Terms" id="9L1-vH-jaU">
+                        <barButtonItem key="rightBarButtonItem" title="Definition" id="Num-eg-0fG">
+                            <connections>
+                                <segue destination="M5x-Ob-7Ap" kind="show" id="kh9-Qi-hy2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="termLabel" destination="lfG-Lk-TTa" id="Fi3-3K-O86"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="462" y="136"/>
+        </scene>
+        <!--Definition Controller-->
+        <scene sceneID="fmV-Uo-0WB">
+            <objects>
+                <viewController id="M5x-Ob-7Ap" userLabel="Definition Controller" customClass="DefinitionController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XAr-VR-qZ5"/>
+                        <viewControllerLayoutGuide type="bottom" id="YIZ-Qo-1c0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0ye-1y-Cfs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="spn-aI-WWp">
+                                <rect key="frame" x="36" y="84" width="303" height="563"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="spn-aI-WWp" firstAttribute="top" secondItem="XAr-VR-qZ5" secondAttribute="bottom" constant="20" id="9Kj-bv-7hB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="spn-aI-WWp" secondAttribute="trailing" constant="20" id="NDM-6B-dbc"/>
+                            <constraint firstItem="spn-aI-WWp" firstAttribute="leading" secondItem="0ye-1y-Cfs" secondAttribute="leadingMargin" constant="20" id="q60-8k-UcX"/>
+                            <constraint firstItem="YIZ-Qo-1c0" firstAttribute="top" secondItem="spn-aI-WWp" secondAttribute="bottom" constant="20" id="rpu-pN-DdZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Definition" id="V1b-aX-l5g">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="PQH-34-UHx">
+                            <connections>
+                                <segue destination="3IX-rZ-Lrs" kind="show" id="xxO-kd-6v7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="definition" destination="spn-aI-WWp" id="Zo4-KQ-UNF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bZ-Kt-j0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="135"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cZm-CO-jSd">
+            <objects>
+                <navigationController id="N4N-v4-B5z" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dpp-qk-u8o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zqa-6v-QfI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cz3-FF-onp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-321" y="137"/>
+        </scene>
+        <!--Search Controller-->
+        <scene sceneID="Guh-Sx-af5">
+            <objects>
+                <viewController id="3IX-rZ-Lrs" userLabel="Search Controller" customClass="SearchController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uzr-c3-S3l"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fpc-Sl-ciS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2G7-U7-14C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYk-cN-S7e">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cYk-cN-S7e" secondAttribute="trailing" id="H2Q-DH-a03"/>
+                            <constraint firstItem="cYk-cN-S7e" firstAttribute="top" secondItem="2G7-U7-14C" secondAttribute="topMargin" id="Jyp-nd-FLs"/>
+                            <constraint firstItem="Fpc-Sl-ciS" firstAttribute="top" secondItem="cYk-cN-S7e" secondAttribute="bottom" id="hRu-Na-bjq"/>
+                            <constraint firstItem="cYk-cN-S7e" firstAttribute="leading" secondItem="2G7-U7-14C" secondAttribute="leading" id="qSE-MZ-fku"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="ZYc-Zn-tgG"/>
+                    <connections>
+                        <outlet property="webView" destination="cYk-cN-S7e" id="BMx-vb-v7C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1E-qY-qbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988" y="135.38230884557723"/>
         </scene>
     </scenes>
 </document>

@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A983D5911ECE7F760078E922 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D5901ECE7F760078E922 /* AppDelegate.swift */; };
-		A983D5931ECE7F760078E922 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D5921ECE7F760078E922 /* ViewController.swift */; };
+		A983D5931ECE7F760078E922 /* TermController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D5921ECE7F760078E922 /* TermController.swift */; };
 		A983D5961ECE7F760078E922 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A983D5941ECE7F760078E922 /* Main.storyboard */; };
 		A983D5981ECE7F760078E922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A983D5971ECE7F760078E922 /* Assets.xcassets */; };
 		A983D59B1ECE7F760078E922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A983D5991ECE7F760078E922 /* LaunchScreen.storyboard */; };
 		A983D5A61ECE7F760078E922 /* FlashCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D5A51ECE7F760078E922 /* FlashCardsTests.swift */; };
+		A983D5B11ECE894C0078E922 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D5B01ECE894C0078E922 /* Flashcard.swift */; };
+		A983D5B51ECE99640078E922 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D5B41ECE99640078E922 /* Deck.swift */; };
+		A9C20FF91ECE9D2D0060F72E /* DefinitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C20FF81ECE9D2D0060F72E /* DefinitionController.swift */; };
+		A9C20FFB1ECEBE6D0060F72E /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C20FFA1ECEBE6D0060F72E /* SearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +32,7 @@
 /* Begin PBXFileReference section */
 		A983D58D1ECE7F760078E922 /* FlashCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A983D5901ECE7F760078E922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A983D5921ECE7F760078E922 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A983D5921ECE7F760078E922 /* TermController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermController.swift; sourceTree = "<group>"; };
 		A983D5951ECE7F760078E922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A983D5971ECE7F760078E922 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A983D59A1ECE7F760078E922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		A983D5A11ECE7F760078E922 /* FlashCardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashCardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A983D5A51ECE7F760078E922 /* FlashCardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsTests.swift; sourceTree = "<group>"; };
 		A983D5A71ECE7F760078E922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A983D5B01ECE894C0078E922 /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
+		A983D5B41ECE99640078E922 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		A9C20FF81ECE9D2D0060F72E /* DefinitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionController.swift; sourceTree = "<group>"; };
+		A9C20FFA1ECEBE6D0060F72E /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				A983D5901ECE7F760078E922 /* AppDelegate.swift */,
-				A983D5921ECE7F760078E922 /* ViewController.swift */,
+				A983D5921ECE7F760078E922 /* TermController.swift */,
+				A9C20FF81ECE9D2D0060F72E /* DefinitionController.swift */,
+				A983D5B41ECE99640078E922 /* Deck.swift */,
 				A983D5941ECE7F760078E922 /* Main.storyboard */,
+				A9C20FFA1ECEBE6D0060F72E /* SearchController.swift */,
+				A983D5B01ECE894C0078E922 /* Flashcard.swift */,
 				A983D5971ECE7F760078E922 /* Assets.xcassets */,
 				A983D5991ECE7F760078E922 /* LaunchScreen.storyboard */,
 				A983D59C1ECE7F760078E922 /* Info.plist */,
@@ -201,7 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A983D5931ECE7F760078E922 /* ViewController.swift in Sources */,
+				A983D5B51ECE99640078E922 /* Deck.swift in Sources */,
+				A9C20FFB1ECEBE6D0060F72E /* SearchController.swift in Sources */,
+				A983D5B11ECE894C0078E922 /* Flashcard.swift in Sources */,
+				A9C20FF91ECE9D2D0060F72E /* DefinitionController.swift in Sources */,
+				A983D5931ECE7F760078E922 /* TermController.swift in Sources */,
 				A983D5911ECE7F760078E922 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +430,7 @@
 				A983D5AC1ECE7F760078E922 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A983D5AD1ECE7F760078E922 /* Build configuration list for PBXNativeTarget "FlashCardsTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +439,7 @@
 				A983D5AF1ECE7F760078E922 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
